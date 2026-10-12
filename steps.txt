@@ -1,0 +1,4 @@
+take user input on argparse which ip and few types to scan 
+subprocess runnmap on those data and save the result on json file
+log what commands where run when
+and do independent analysys do it good look it out on gemini
