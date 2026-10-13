@@ -1,15 +1,7 @@
-from parser import input_taker
-from scanner import scannerf
-import sys
+from cli_handler import cli_handler
+from scanner import scanner
 def main():
-    try:
-        result = input_taker()
-        ip = result.get("IP")
-        port = result.get("PORT")
-        flag = result.get("FLAG")
-        scannerf(ip, port, flag)
-    except:
-        print("Error occured.")
-        sys.exit(1)
+    result = cli_handler()
+    scanner(*result)
 if __name__ == "__main__":
     main()
