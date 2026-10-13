@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///C:/Program Files (x86)/Nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Tue Oct 13 20:23:34 2026 as: nmap -p 80,320 -oX - 192.168.1.4 -->
+<nmaprun scanner="nmap" args="nmap -p 80,320 -oX - 192.168.1.4" start="1791894214" startstr="Tue Oct 13 20:23:34 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="80,320"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1791894215" endtime="1791894215"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="192.168.1.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="128"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="320"><state state="closed" reason="reset" reason_ttl="128"/><service name="ptp-general" method="table" conf="3"/></port>
+</ports>
+<times srtt="0" rttvar="3750" to="100000"/>
+</host>
+<runstats><finished time="1791894215" timestr="Tue Oct 13 20:23:35 2026" summary="Nmap done at Tue Oct 13 20:23:35 2026; 1 IP address (1 host up) scanned in 0.90 seconds" elapsed="0.90" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
