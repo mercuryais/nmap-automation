@@ -1,15 +1,13 @@
 from logger import logger
-from data import *
+import subprocess
 
 
 def scanner(ip, port, flag):
-    script = f"nmap {ip}"
+    script = ['nmap', '-oX', 'data.xml', ip]
     if port:
-        script = f"{script} -p {port}"
+        script.extend(['-p', port])
     if flag:
-        script = f"{script} -{flag}"
+        script.append(f"-{flag}") 
     result = subprocess.run(script, capture_output=True, text=True)
-    print(result.stdout if result.returncode == 0 else result.stderr)
     if result.returncode == 0:
         logger(script)
-        data(script)
