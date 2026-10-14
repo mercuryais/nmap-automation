@@ -1,6 +1,6 @@
 from logger import logger
 import subprocess
-from analyser import analys
+from analyser import *
 def scanner(ip, port, flag):
     script = ['nmap', '-oX', 'data.xml', ip]
     if port:
@@ -10,6 +10,6 @@ def scanner(ip, port, flag):
     result = subprocess.run(script, capture_output=True, text=True)
     if result.returncode == 0:
         logger(script)
-        analys()
+        user_readable()
     else:
         print(result.stderr)
