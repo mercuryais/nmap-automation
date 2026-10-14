@@ -1,12 +1,16 @@
 import logging
-def logger(script):
+
+
+def logger(messages):
+
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
     handler = logging.FileHandler("logs.log", mode="a")
-    formatter = logging.Formatter("%(asctime)s \n%(message)s ")
+    formatter = logging.Formatter("%(asctime)s %(message)s ")
     handler.setFormatter(formatter)
     logger.addHandler(handler)
-    logger.debug(script)
+    logger.info(messages)
 
 if __name__ == "__main__":
     logger()
+# wheter succesful or not
