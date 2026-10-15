@@ -1,11 +1,3 @@
-take user input on argparse which ip and few types to scan 
-subprocess runnmap on those data and save the result on json file
-log what commands where run when
-and do independent analysys do it good look it out on gemini
-
-try to make flag in parser better - user can use flags with -
-dont print nmap result instead save it on xml then analyze it and print it out
-keep user input same as nmap
-actually just send user input directly to nmap and if wrong command handle it 
-add -r flag to print raw file
-enrich log with starting to scan, failed to scan and fail should be logging.err
+fix log
+fix analyser
+make it oop
